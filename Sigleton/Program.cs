@@ -10,6 +10,9 @@ namespace Sigleton
     {
         static void Main(string[] args)
         {
+            var customerManager = CustomerManager.CreateAsSingleton();
+            customerManager.Save();
+            Console.ReadLine();
         }
     }
 }
