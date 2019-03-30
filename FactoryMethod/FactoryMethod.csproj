@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseFactory\DatabaseFactory.cs" />
+    <Compile Include="DatabaseFactory\IDatabaseConnector.cs" />
+    <Compile Include="DatabaseFactory\IDatabaseFactory.cs" />
+    <Compile Include="DatabaseFactory\MongoDB\MongoDbConnector.cs" />
+    <Compile Include="DatabaseFactory\PostgreSQL\PostgreSQLConnector.cs" />
     <Compile Include="Enums\PaymentTypes.cs" />
     <Compile Include="LoggerFactory\CustomerManager.cs" />
     <Compile Include="LoggerFactory\ILogger.cs" />

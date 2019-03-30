@@ -12,6 +12,8 @@ namespace FactoryMethod
         static void Main(string[] args)
         {
             CustomerManager customerManager = new CustomerManager(new LoggerFactory2());
+            DatabaseFactory.DatabaseFactory databaseFactory = new DatabaseFactory.DatabaseFactory();
+            databaseFactory.CreateDatabaseConnector().Connect();
             customerManager.Save();
             Console.ReadLine();
         }

@@ -10,6 +10,7 @@ namespace Sigleton
     {
         static CustomerManager _customerManager;
         static Object _locker = new Object();
+       
         private CustomerManager()
         {
 
@@ -17,7 +18,7 @@ namespace Sigleton
 
         public static CustomerManager CreateAsSingleton()
         {
-            /*MultiThread yapısına uygun olması için _customerManager nesnesinin oluşturulması sırasında kilitliyoruz*/
+           /*Threadsafe olması için nesnenin oluşturulması sırasında kilitliyoruz*/
            if (_customerManager == null)
             {
                 lock (_locker)
